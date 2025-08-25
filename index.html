@@ -82,7 +82,7 @@
     </div>
   </nav>
 
-  <!-- Header com alternância de imagens -->
+
   <header id="banner-header" class="hero text-center">
     <div class="container">
       <h1 class="fw-bold">Agende seu horário na barbearia</h1>
@@ -166,7 +166,7 @@
         document.body.style.color = '#f1f1f1';
       }
 
-      // --- Alternância das imagens do banner ---
+      
       const imagens = [
         "imagens/bg-banner-texto.jpg",
         "imagens/bg-header.png"
@@ -180,9 +180,10 @@
         indice = (indice + 1) % imagens.length;
       }
 
-      trocarImagem(); // inicia com a primeira
-      setInterval(trocarImagem, 6000); // troca a cada 6 segundos
+      trocarImagem(); 
+      setInterval(trocarImagem, 6000); 
     });
   </script>
 </body>
 </html>
+
