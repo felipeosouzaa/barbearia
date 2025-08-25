@@ -1,0 +1,199 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Agende seu horário com o barbeiro diretamente pelo site." />
+  <meta name="author" content="InovaSoft" />
+  <title id="titulo-pagina">Agende seu horário</title>
+  <link rel="icon" type="image/x-icon" href="logo.png" id="favicon-link" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --cor-principal: #333333;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header.hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagens/bg-barbearia.jpg') no-repeat center center/cover;
+      color: #fff;
+      padding: 80px 20px;
+    }
+
+    header.hero h1 {
+      font-size: 2.8rem;
+    }
+
+    header.hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+    }
+
+    .how-it-works i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: var(--cor-principal);
+    }
+
+    a.btn {
+      transition: all 0.3s ease;
+    }
+
+    a.btn:hover {
+      transform: scale(1.05);
+    }
+
+    #whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      z-index: 999;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #212529;
+      color: #fff;
+      padding: 40px 0;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    window.BARBEIRO = window.BARBEIRO || {
+      nome: "Barbearia Padrão",
+      logo: "logo.png",
+      corPrincipal: "#333333",
+      telefone: "5500000000000",
+      tema: "claro"
+    };
+  </script>
+  <script src="config.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--cor-principal);">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img id="logo-barbeiro" src="" alt="Logo" height="40" class="me-2" />
+        <span id="nome-barbeiro"></span>
+      </a>
+      <div class="ms-auto">
+        <a href="#" class="text-white me-3">Início</a>
+        <a href="#" class="text-white me-3">Entrar</a>
+        <a href="#" class="text-warning">Cadastrar</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero text-center">
+    <div class="container">
+      <h1 class="fw-bold">Agende seu horário na barbearia</h1>
+      <p class="lead mt-3">Com o InovaSoft, você pode agendar seu corte de cabelo ou barba em poucos cliques, escolhendo o barbeiro e serviço de sua preferência.</p>
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <a id="link-whatsapp" class="btn btn-danger btn-lg" target="_blank">Agendar agora</a>
+        <a href="#" class="btn btn-outline-light btn-lg">Entrar</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="container text-center my-5">
+    <h2 class="mb-4">Como funciona</h2>
+    <div class="row how-it-works">
+      <div class="col-md-4">
+        <i class="bi bi-calendar-check"></i>
+        <h5>Escolha a data</h5>
+        <p>Selecione o dia e horário que melhor se encaixa na sua agenda.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-person-circle"></i>
+        <h5>Escolha o barbeiro</h5>
+        <p>Selecione seu barbeiro preferido entre os profissionais disponíveis.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-patch-check"></i>
+        <h5>Confirme o agendamento</h5>
+        <p>Receba a confirmação do seu agendamento e lembretes automáticos.</p>
+      </div>
+    </div>
+  </section>
+
+  <a id="whatsapp-float" href="#" target="_blank" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>InovaSoft</h5>
+          <p>Sistema de agendamento para barbearias</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Links rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Agendar</a></li>
+            <li><a href="#">Meus agendamentos</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Contato</h5>
+          <p><i class="bi bi-envelope me-2"></i> contato@inovasoft.com.br</p>
+          <p><i class="bi bi-telephone me-2"></i> (27) 99818-7524</p>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <small>&copy; 2025 InovaSoft. Todos os direitos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const BARBEIRO = window.BARBEIRO;
+
+      document.title = `Agende com ${BARBEIRO.nome}`;
+      document.getElementById("logo-barbeiro").src = BARBEIRO.logo;
+      document.getElementById("nome-barbeiro").textContent = BARBEIRO.nome;
+      document.getElementById("favicon-link").href = BARBEIRO.logo;
+      document.getElementById("link-whatsapp").href = `https://wa.me/${BARBEIRO.telefone}`;
+      document.getElementById("whatsapp-float").href = `https://wa.me/${BARBEIRO.telefone}`;
+      document.documentElement.style.setProperty('--cor-principal', BARBEIRO.corPrincipal);
+
+      if (BARBEIRO.tema === "escuro") {
+        document.documentElement.setAttribute('data-tema', 'escuro');
+        document.body.style.backgroundColor = '#121212';
+        document.body.style.color = '#f1f1f1';
+      }
+    });
+  </script>
+</body>
+</html>

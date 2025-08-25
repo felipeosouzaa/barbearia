@@ -1,0 +1,57 @@
+:root {
+  --cor-principal: #333333;
+  --fonte-principal: 'Segoe UI', sans-serif;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: var(--cor-principal);
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+a.btn {
+  transition: all 0.3s ease;
+}
+
+a.btn:hover {
+  transform: scale(1.05);
+}
+
+img#imagem-principal {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.how-it-works h5 {
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--cor-principal);
+}
+
+footer {
+  font-size: 0.95rem;
+}
+
+footer h5 {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .how-it-works .col-md-4 {
+    margin-bottom: 2rem;
+  }
+}
