@@ -19,17 +19,29 @@ header h1 {
   font-size: 2.5rem;
 }
 
+/* Header com imagens alternadas pelo JS */
+header.hero {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 2s ease-in-out; /* efeito fade */
+}
+
 a.btn {
   transition: all 0.3s ease;
 }
 
 a.btn:hover {
   transform: scale(1.05);
-}
-
-img#imagem-principal {
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .how-it-works h5 {
@@ -44,6 +56,23 @@ footer {
 
 footer h5 {
   font-size: 1.1rem;
+}
+
+#whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 768px) {
