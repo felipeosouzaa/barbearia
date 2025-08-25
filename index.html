@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -27,34 +26,17 @@
       transition: background-color 0.3s, color 0.3s;
     }
 
-    header.hero {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagens/bg-barbearia.jpg') no-repeat center center/cover;
+    footer {
+      background-color: #212529;
       color: #fff;
-      padding: 80px 20px;
+      padding: 40px 0;
     }
-
-    header.hero h1 {
-      font-size: 2.8rem;
+    footer a {
+      color: #fff;
+      text-decoration: none;
     }
-
-    header.hero p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.2rem;
-    }
-
-    .how-it-works i {
-      font-size: 2rem;
-      margin-bottom: 10px;
-      color: var(--cor-principal);
-    }
-
-    a.btn {
-      transition: all 0.3s ease;
-    }
-
-    a.btn:hover {
-      transform: scale(1.05);
+    footer a:hover {
+      text-decoration: underline;
     }
 
     #whatsapp-float {
@@ -72,19 +54,6 @@
       font-size: 28px;
       z-index: 999;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    footer {
-      background-color: #212529;
-      color: #fff;
-      padding: 40px 0;
-    }
-    footer a {
-      color: #fff;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
     }
   </style>
   <script>
@@ -113,10 +82,13 @@
     </div>
   </nav>
 
-  <header class="hero text-center">
+  <!-- Header com alternância de imagens -->
+  <header id="banner-header" class="hero text-center">
     <div class="container">
       <h1 class="fw-bold">Agende seu horário na barbearia</h1>
-      <p class="lead mt-3">Com o InovaSoft, você pode agendar seu corte de cabelo ou barba em poucos cliques, escolhendo o barbeiro e serviço de sua preferência.</p>
+      <p class="lead mt-3">
+        Com o InovaSoft, você pode agendar seu corte de cabelo ou barba em poucos cliques, escolhendo o barbeiro e serviço de sua preferência.
+      </p>
       <div class="d-flex justify-content-center gap-3 mt-4">
         <a id="link-whatsapp" class="btn btn-danger btn-lg" target="_blank">Agendar agora</a>
         <a href="#" class="btn btn-outline-light btn-lg">Entrar</a>
@@ -193,6 +165,23 @@
         document.body.style.backgroundColor = '#121212';
         document.body.style.color = '#f1f1f1';
       }
+
+      // --- Alternância das imagens do banner ---
+      const imagens = [
+        "imagens/bg-banner-texto.jpg",
+        "imagens/bg-header.png"
+      ];
+      let indice = 0;
+      const banner = document.getElementById("banner-header");
+
+      function trocarImagem() {
+        banner.style.backgroundImage =
+          `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${imagens[indice]}')`;
+        indice = (indice + 1) % imagens.length;
+      }
+
+      trocarImagem(); // inicia com a primeira
+      setInterval(trocarImagem, 6000); // troca a cada 6 segundos
     });
   </script>
 </body>
