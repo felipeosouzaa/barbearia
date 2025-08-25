@@ -5,3 +5,5 @@ window.BARBEIRO = {
   telefone: "5527999999999",
   tema: "claro"
 };
+
+
